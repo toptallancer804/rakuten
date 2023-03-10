@@ -1,0 +1,470 @@
+// ==========================================================================
+// Foundation
+// ==========================================================================
+@import "_reset";
+@import "_mixin";
+// ==========================================================================
+// Page
+// ==========================================================================
+body {
+    background: #fff;
+}
+
+.p-container {
+    max-width: 1040px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.p-header {
+    &__logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 17px;
+        img {
+            max-width: 333px;
+        }
+    }
+    &-wrap {
+        @include flex-hb-vc;
+        padding: 0 40px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+        margin-bottom: 33px;
+        &__links {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                    font-family: myFirstFont;
+                    font-weight: bold;
+                    font-size: 17px;
+                    text-align: left;
+                    color: #464646;
+                }
+            }
+        }
+        &__functions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            max-width: 50%;
+            &--link {
+                margin-right: 18px;
+            }
+            &--search {
+                position: relative;
+                input {
+                    width: 269px;
+                    height: 32px;
+                    border-radius: 16px;
+                    background: #fff;
+                    border: 1px solid #1a1a1a;
+                    position: relative;
+                    padding: 0 15px;
+                    font-size: 16px;
+                    &:focus {
+                        outline-style: double;
+                    }
+                }
+                .__icon {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    &-btn {
+        &__links {
+            @include flex-hb;
+        }
+        &__link {
+            @include flex-hc-vc;
+            width: 123px;
+            height: 50px;
+            background: #1996c4;
+            a {
+                font-family: myFirstFont;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.p-main {
+    margin-top: 21px;
+    &__fv {
+        overflow-x: inherit;
+    }
+    &__ranking {
+        margin-top: 80px;
+        margin-right: auto;
+        margin-left: auto;
+        &-ttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: bold;
+            font-size: 37px;
+            letter-spacing: 0.05em;
+            text-align: left;
+            color: #1996c4;
+        }
+        &-subttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: 0.05em;
+            text-align: left;
+            color: #1a1a1a;
+        }
+        &-wrap {
+            &__inner {
+                display: flex;
+                justify-content: center;
+                gap: 17px 70px;
+                flex-wrap: wrap;
+                &-intro {
+                    width: calc((100% - 140px) / 3);
+                    &-tl {
+                        @include flex-hc-ve;
+                        figure {
+                            padding-bottom: 17px;
+                        }
+                        h4 {
+                            font-family: myFirstFont;
+                            font-weight: bold;
+                            font-size: 50px;
+                            letter-spacing: 0.05em;
+                            color: #1a1a1a;
+                            span {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                    &-img {
+                        img {
+                            margin-top: 8px;
+                            width: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+                    &-subttl {
+                        font-family: myFirstFont;
+                        font-weight: bold;
+                        font-size: 24px;
+                        letter-spacing: 0.05em;
+                        line-height: 30px;
+                        text-align: center;
+                        color: #1996c4;
+                        margin-top: 13px;
+                    }
+                    .letter_spacing {
+                        letter-spacing: -1.5px;
+                    }
+                    &-p {
+                        font-family: "Hiragino Sans";
+                        font-weight: normal;
+                        font-size: 15px;
+                        text-align: center;
+                        color: #1a1a1a;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &_newitem {
+        margin-top: 98px;
+        margin-right: auto;
+        margin-left: auto;
+        &-ttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: bold;
+            font-size: 37px;
+            letter-spacing: 0.05em;
+            color: #1996c4;
+        }
+        &-subttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: 0.05em;
+            color: #000;
+        }
+        &-wrap {
+            margin-top: 37px;
+            &__inner {
+                @include flex-hb-vc;
+                &-intro {
+                    width: calc((100% - 42px)/ 2);
+                    &-img {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    &-ttl {
+                        margin-top: 9px;
+                        font-family: myFirstFont;
+                        ;
+                        font-weight: normal;
+                        font-size: 24px;
+                        letter-spacing: 0.05em;
+                        text-align: left;
+                        color: #1996c4;
+                    }
+                    &-subttl {
+                        margin-top: 10px;
+                        font-family: "Hiragino Sans";
+                        font-weight: normal;
+                        font-size: 15px;
+                        color: #4a4a4a;
+                    }
+                }
+            }
+            &__outer {
+                @include flex-hb;
+                margin-top: 41px;
+                &-intro {
+                    width: calc((100% - 100px)/ 3);
+                    &-img {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .letter_spacing {
+                        letter-spacing: -1.1px;
+                    }
+                    &-ttl {
+                        margin-top: 9px;
+                        font-family: myFirstFont;
+                        ;
+                        font-weight: normal;
+                        font-size: 24px;
+                        letter-spacing: 0.05em;
+                        text-align: left;
+                        color: #1996c4;
+                    }
+                    &-subttl {
+                        margin-top: 10px;
+                        font-family: "Hiragino Sans";
+                        font-weight: normal;
+                        font-size: 15px;
+                        color: #4a4a4a;
+                    }
+                }
+            }
+        }
+    }
+    &-feature {
+        margin-top: 132px;
+        margin-right: auto;
+        margin-left: auto;
+        &-ttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: bold;
+            font-size: 37px;
+            letter-spacing: 0.05em;
+            color: #1996c4;
+        }
+        &-subttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: 0.05em;
+            color: #000;
+        }
+        &__wrap {
+            margin-top: 27px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 33px 33px;
+            &-inner {
+                width: calc((100% - 33px) / 2);
+            }
+        }
+    }
+    &-pickitem {
+        margin-top: 106px;
+        &-ttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: bold;
+            font-size: 37px;
+            letter-spacing: 0.05em;
+            color: #1996c4;
+        }
+        &-subttl {
+            @include flex-hc-vc;
+            font-family: myFirstFont;
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: 0.05em;
+            color: #252525;
+        }
+        &-wrap {
+            margin-top: 36px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px 41px;
+            &__inner {
+                &-intro {
+                    width: calc((100% - 100px) / 3);
+                    &__a {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .letter_spacing {
+                        letter-spacing: -1.5px;
+                    }
+                    &__ttl {
+                        margin-top: 2px;
+                        font-family: myFirstFont;
+                        font-weight: bold;
+                        font-size: 24px;
+                        text-align: left;
+                        color: #1996c4;
+                    }
+                    &__letter {
+                        letter-spacing: -1.5px;
+                    }
+                    &__subttl {
+                        margin-top: 9px;
+                        font-family: "Hiragino Sans";
+                        font-weight: normal;
+                        font-size: 15px;
+                        text-align: left;
+                        color: #4a4a4a;
+                    }
+                }
+            }
+        }
+        &__back {
+            margin-top: 104px;
+            margin-bottom: 16px;
+            @include flex-hc-vc;
+            img {
+                width: 510px;
+            }
+        }
+    }
+    &-footer {
+        background: #1996c4;
+        &__inner {
+            padding: 100px 0 0 0;
+            @include flex-hb;
+            &-text {
+                width: calc((100% - 70px) / 3);
+                .letter_spacing {
+                    letter-spacing: -1.5px;
+                }
+                &__ttl {
+                    font-family: "Yu Gothic";
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #fff;
+                    padding-left: 14px;
+                    padding-bottom: 10px;
+                    border-left: 10px solid #fff;
+                    border-bottom: 3px solid #fff;
+                }
+                &__subttl {
+                    font-family: "Hiragino Kaku Gothic ProN";
+                    font-weight: normal;
+                    font-size: 10px;
+                    line-height: 13px;
+                    text-align: left;
+                    color: #fff;
+                    margin-top: 15px;
+                }
+                &_btns {
+                    margin-top: 16px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 9px 9px;
+                    a {
+                        @include flex-hc-vc;
+                        font-family: "Yu Gothic";
+                        font-weight: bold;
+                        font-size: 11px;
+                        color: #fff;
+                        width: calc((100% - 9px) / 2);
+                        height: 23px;
+                        background: transparent;
+                        border: 2px solid #fff;
+                    }
+                }
+            }
+        }
+        &__btns {
+            margin-top: 41px;
+            display: flex;
+            justify-content: space-between;
+            &_links {
+                width: calc((100% - 70px) / 3);
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                a {
+                    font-family: "Hiragino Kaku Gothic ProN";
+                    font-weight: normal;
+                    font-size: 10px;
+                    letter-spacing: 0.05em;
+                    line-height: 14px;
+                    color: #fff;
+                    width: 128px;
+                    height: 28px;
+                    background: transparent;
+                    border: 2px solid #fff;
+                    padding: 5px 0px 0px 16px;
+                }
+            }
+            &__icon {
+                position: absolute;
+                top: 50%;
+                right: 18px;
+                transform: translateY(-50%);
+            }
+        }
+        &__intro {
+            @include flex-hc-vc;
+            margin-top: 60px;
+            padding-bottom: 140px;
+            &__ttl {
+                padding-right: 24px;
+                padding-left: 18px;
+                border-right: 2px solid #fff;
+                font-family: "Hiragino Sans";
+                font-weight: normal;
+                font-size: 11px;
+                color: #fff;
+                &-active {
+                    padding-left: 16px;
+                    font-family: "Hiragino Sans";
+                    font-weight: normal;
+                    font-size: 11px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
